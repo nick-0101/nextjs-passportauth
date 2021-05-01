@@ -1,13 +1,17 @@
-## Example app using MongoDB
+## Next.js Auth App
 
-[MongoDB](https://www.mongodb.com/) is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. This example will show you how to connect to and use MongoDB as your backend for your Next.js app.
+This app was made to learn Next.js and incorporate authentication.
 
-If you want to learn more about MongoDB, visit the following pages:
+# Tech/framework used #
+Built with
 
-- [MongoDB Atlas](https://mongodb.com/atlas)
-- [MongoDB Documentation](https://docs.mongodb.com/)
+  * [Next.js](https://nextjs.org/)
+  * [PassportJs](http://www.passportjs.org/)
+  * [Mongodb](https://www.mongodb.com/)
+  * [TailwindCSS](https://tailwindcss.com/)
+  
 
-## Deploy your own
+# Boilerplate 
 
 Once you have access to the environment variables you'll need, deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
