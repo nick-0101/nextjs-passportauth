@@ -1,8 +1,8 @@
-## Next.js Auth App
+# Next.js Auth App
 
 This app was made to learn Next.js and incorporate authentication.
 
-# Tech/framework used #
+## Tech/framework used #
 Built with
 
   * [Next.js](https://nextjs.org/)
@@ -11,7 +11,7 @@ Built with
   * [TailwindCSS](https://tailwindcss.com/)
   
 
-# Boilerplate 
+## Boilerplate 
 
 Once you have access to the environment variables you'll need, deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
