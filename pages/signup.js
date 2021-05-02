@@ -1,7 +1,6 @@
 import Layout, { siteTitle } from '../components/layout';
 import Head from 'next/head';
 import Router from 'next/router';
-
 import Header from '../components/header';
 import { useState } from 'react';
 
