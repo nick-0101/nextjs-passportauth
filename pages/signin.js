@@ -3,8 +3,9 @@ import Header from '../components/header';
 import Head from 'next/head';
 import Router from 'next/router';
 import { useState } from 'react';
+import { getCsrfToken } from 'next-auth/client';
 
-export default function SignUp() {
+export default function SignUp({ csrfToken }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -104,17 +105,6 @@ export default function SignUp() {
               </div>
             </div>
 
-            <div className='flex items-center justify-between'>
-              <div className='text-sm'>
-                <a
-                  href='#'
-                  className='font-medium text-indigo-600 hover:text-indigo-500'
-                >
-                  Forgot your password?
-                </a>
-              </div>
-            </div>
-
             <div>
               <button
                 type='submit'
@@ -128,4 +118,13 @@ export default function SignUp() {
       </div>
     </Layout>
   );
+}
+
+// This is the recommended way for Next.js 9.3 or newer
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      csrfToken: await getCsrfToken(context),
+    },
+  };
 }

@@ -1,6 +1,9 @@
 import Link from 'next/link';
+import { useSession } from 'next-auth/client';
 
 export default function Header() {
+  const [session, loading] = useSession();
+
   return (
     <>
       <header className='header text-gray-200 py-6 px-4 flex'>
@@ -12,14 +15,18 @@ export default function Header() {
         </div>
         {/* Close Menu */}
         <div className='mx-2 flex items-center flex justify-end text-gray-200'>
-          <Link href='/signin'>
-            <a className='py-3 px-4 mx-2 text-gray-900'>Sign In</a>
-          </Link>
-          <Link href='/signup'>
-            <a className='py-3 px-4 mx-2 bg-indigo-500 rounded-lg text-gray-100'>
-              Sign Up
-            </a>
-          </Link>
+          {!session && (
+            <>
+              <Link href='/signin'>
+                <a className='py-3 px-4 mx-2 text-gray-900'>Sign In</a>
+              </Link>
+              <Link href='/signup'>
+                <a className='py-3 px-4 mx-2 bg-indigo-500 rounded-lg text-gray-100'>
+                  Sign Up
+                </a>
+              </Link>
+            </>
+          )}
         </div>
       </header>
     </>

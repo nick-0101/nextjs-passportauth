@@ -4,13 +4,13 @@ export async function getApiUsers(req, res) {
   const { db } = await connectToDatabase();
 
   // Fetch users from mongodb
-  const users = await db.collection('data').find({}).limit(5).toArray();
+  const users = await db.collection('users').find({}).limit(5).toArray();
 
   // Filter users
   const filterUsers = [];
 
   users.forEach((user) => {
-    const userInfo = { username: user.username };
+    const userInfo = { name: user.name, image: user.image };
     filterUsers.push(userInfo);
   });
 
